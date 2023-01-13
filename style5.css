@@ -50,7 +50,6 @@ body{
 
     
 }
-
 /* ------------------------------ */
 .banner img{
     width: 100%;
@@ -156,8 +155,7 @@ left: -8px;
 }
 /* ------------------------------ */
 .activ{
-    /* margin-top: 100px; */
-    
+    /* margin-top: 100px; */   
 }
 .OXO{
     position: relative;
@@ -233,6 +231,45 @@ left: -8px;
 .actxt a:hover{
     color: rgb(221, 33, 33);
 }
+/* ------------------------------ */
+.rightshere {
+    position: fixed;
+    z-index: 8;
+    top: 500px;
+    right: -85px;
+    transition: all 0.5s  ease;
+}
+.rightshere .wrap{
+    white-space: pre-wrap;
+    background-color: rgba(225, 191, 97,0.8);
+    border-radius: 20px;
+    width: 110px;
+}
+.rightshere img{
+    margin: 10px -37px;
+}
+.rightshere::after{
+    content: " ◀ ";
+    color: aliceblue;
+    white-space: pre-wrap;
+
+    background-color: rgba(225, 191, 97,0.8) ;
+    width: 1px;
+    position: absolute;
+    z-index: 9;
+    top: 110px;
+    left: 5px;
+
+  
+}
+.rightshere:hover{
+    right: -20px;
+}
+.rightshere:hover::after{
+    opacity: 0;
+}
+
+
 /* ------------------------------ */
 .more{
     margin-bottom: 130px;
