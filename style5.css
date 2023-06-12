@@ -3,9 +3,10 @@
 }
 body{
     padding-top: 60px;
+    overflow-x: hidden;
 }
 
-.header{
+header{
     width: 100%;
     background-color: rgb(32, 30, 30);
     display: flex;
@@ -14,18 +15,43 @@ body{
     top: 0;
     z-index: 10;
 }
-.header nav{
-    width: 100%;
-    text-align: right;
-    line-height: 60px;
+.navbar{
+    /* display: flex;
+    justify-content: flex-end; */
+    width:88%;
+    position: relative;
+
 }
-.header nav a{
+
+.nav{
+    width: 95%;
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: #fff; */
+
+}
+
+.nav li{
+    list-style: none;
+}
+.nav a{
+    font-size: 17px;
+    letter-spacing: 1px;
     color: blanchedalmond;
     text-decoration: none;
-    padding: 0px 15px;
+    padding: 0px 10px;
     line-height: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: inline-block;
+}
+header ul li{
+    list-style: none;
+
+}
+.logo{
+    padding-top: 15px;
+    margin-left: 20px;
 }
 .logo img{
     background-color: rgb(215, 186, 69);
@@ -35,21 +61,79 @@ body{
 }
 .name{
     font-size: 18px;
-    margin: 0px 20px;
-    width: 400px;
-    line-height: 60px;
+    margin-left: 20px;
+    width: 320px;
+    height: 20px;
+    margin-top: 35px;
     color: rgb(204, 175, 61);
     display: inline-block;
 }
-.header a:hover{
-    border: 1px solid  goldenrod;
-    border-radius: 10px;
+header a:hover{
+    border-radius: 20px;
     background-color: goldenrod;
     color: rgb(19, 18, 18);
     /* color: rgb(255, 255, 255); */
-
-    
 }
+.bar{
+    display: none;
+}
+#menu-toggler{
+    display: none;
+}
+#bugar{
+    color: aliceblue;
+    transform: scale(2);
+    display: none;
+}
+@media (min-width: 1200px){
+    .logo{
+        margin-left: 80px;
+    }
+}
+@media (max-width: 900px){
+    header a:hover{
+        border: 0px solid  goldenrod;
+        background-color: rgba(0,0,0,0);
+        color: rgb(244, 224, 7);
+    }
+    .navbar{
+        display: block;
+    }
+    .bar{
+        display:block;
+        cursor: pointer;
+    }
+    .navbar{
+        display:none;
+    }
+    .nav{
+        position: absolute;
+        right: 0;
+        right: 30%;
+        top: 50%;
+        display: block;
+    }
+    .nav li{
+        display: flex;
+        justify-content: center;
+    }
+    #menu-toggler:checked ~ .navbar{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color:rgba(0,0,0,0.8);
+        position: absolute;
+        top: 100%;
+    }
+    #bugar{
+        display: block;
+        position: absolute;
+        top: 40%;
+        right: 5%;
+    }
+
+}
+
 /* ------------------------------ */
 .banner img{
     width: 100%;
