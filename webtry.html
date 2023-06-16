@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style5.css">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Zen+Antique&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body>
         <header>
@@ -64,7 +65,7 @@
         </div>
 <!-- 房型 -->
         <div class="room">
-            <div class="XXX"></div>
+            <div class="XXX wow animate__animated animate__fadeIn" data-wow-duration="1.3s"></div>
             <!-- <h4>おんせん</h4> -->
             <div class="wrap">
                 <div class="rooms">
@@ -86,9 +87,9 @@
         </div>
 <!--  -->
 
-            <div class="OXO"></div>
+            <div class="OXO wow animate__animated animate__fadeIn" data-wow-duration="1.3s"></div>
             
-        <div class="activ1">
+        <div class="activ1 wow animate__animated animate__fadeIn" data-wow-duration="1.3s" data-wow-delay="0.9s">
             <div class="content1">
                 <div class="pic1">
                     <img src="./img/和服.jpg" >
@@ -103,7 +104,7 @@
 
 
         </div>
-        <div class="activ2">
+        <div class="activ2 wow animate__animated animate__fadeIn" data-wow-duration="1.3s" data-wow-delay="1.3s">
             <div class="content2">
                 <div class="pic2">
                     <img src="./img/展覽.jpg" >
@@ -126,7 +127,7 @@
 <!-- 右邊突出 -->
         <div class="rightshere">
             <div class="wrap">
-                <a href="#"> <img width="50px" height="50px" src="img/icon/FB.png" alt=""></a>
+                <a href="#" class="FB"> <img width="50px" height="50px" src="img/icon/FB.png" alt=""></a>
                 <a href="#"><img src="img/icon/instagram.png" alt=""></a>
                 <a href="#"><img src="img/icon/twitter.png" alt=""></a>
             </div>
@@ -135,7 +136,7 @@
 <!-- 更多資訊 -->
         <div class="OOO"></div>
 
-        <div class="more">
+        <div class="more wow animate__animated animate__fadeInUp">
 
             <div class="wrap-up">
 
@@ -206,6 +207,9 @@
         </div>
        
         <script src="https://kit.fontawesome.com/1d5975ddf1.js" crossorigin="anonymous"></script>
-        
+        <script src="./wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
     </body>
     </html>

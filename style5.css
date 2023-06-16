@@ -345,13 +345,20 @@ left: -8px;
     line-height: 200px;
     font-family: 'Zen Antique', serif;
     position: absolute;
-    left: 30%;
+    left: 28%;
     color: rgb(101, 101, 101);
 }
 /* oooooooooo */
 @media (min-width: 1000px){
     .rooms img:hover{
         transform: scale(1.1);
+    }
+}
+@media (max-width: 1100px){
+    .OXO::before{
+        left:25%;
+        line-height: 80px;
+        margin-top: 50px;
     }
 }
 @media (max-width: 900px){
@@ -366,7 +373,7 @@ left: -8px;
         padding: 10px;
     }
     .OXO::before{
-        left:20%;
+        left:16%;
         line-height: 80px;
         margin-top: 50px;
     }
@@ -646,6 +653,10 @@ left: -8px;
 .rightshere img{
     margin: 10px -37px;
 }
+.rightshere .FB img{
+    margin:10px -40px;
+    transform: scale(1.1);
+}
 .rightshere::after{
     content: " く ";
     color: aliceblue;
@@ -668,7 +679,11 @@ left: -8px;
 }
 
 
-
+@media (max-width: 900px){
+    .rightshere{
+        display: none;
+    }
+}
 
 
 
