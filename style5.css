@@ -647,7 +647,7 @@ left: -8px;
     margin: 10px -37px;
 }
 .rightshere::after{
-    content: " ◀ ";
+    content: " く ";
     color: aliceblue;
     white-space: pre-wrap;
 
