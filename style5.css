@@ -1,9 +1,13 @@
-*{
-    /* position: relative; */
-}
+
 body{
+    width: 100%;
     padding-top: 60px;
     overflow-x: hidden;
+}
+html{
+    width: 100%;
+    overflow-x: hidden;
+
 }
 
 header{
@@ -25,7 +29,7 @@ header{
 
 .nav{
     width: 95%;
-    padding-top: 15px;
+    padding-top: 10px;
     display: flex;
     justify-content: flex-end;
     /* background-color: #fff; */
@@ -41,7 +45,7 @@ header{
     color: blanchedalmond;
     text-decoration: none;
     padding: 0px 10px;
-    line-height: 30px;
+    line-height: 50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: inline-block;
 }
@@ -50,23 +54,28 @@ header ul li{
 
 }
 .logo{
-    padding-top: 15px;
+    margin: auto;
     margin-left: 20px;
 }
 .logo img{
     background-color: rgb(215, 186, 69);
     width: 70px;
     padding: 6px;
-    margin-top:5px ;
+    margin-top:5% ;
 }
 .name{
+    /* background-color: #e90a0a; */
+    width: 100%;
+    margin: auto;
+}
+.name p {
+    font-family: 'Noto Serif', serif;
+    letter-spacing: 1px;
     font-size: 18px;
     margin-left: 20px;
-    width: 320px;
-    height: 20px;
-    margin-top: 35px;
     color: rgb(204, 175, 61);
     display: inline-block;
+    /* background-color: #fff; */
 }
 header a:hover{
     border-radius: 20px;
@@ -90,6 +99,12 @@ header a:hover{
         margin-left: 80px;
     }
 }
+@media (max-width: 1000px){
+    .name p {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}
 @media (max-width: 900px){
     header a:hover{
         border: 0px solid  goldenrod;
@@ -108,8 +123,7 @@ header a:hover{
     }
     .nav{
         position: absolute;
-        right: 0;
-        right: 30%;
+        right: 0%;
         top: 50%;
         display: block;
     }
@@ -133,32 +147,85 @@ header a:hover{
     }
 
 }
+@media (max-width: 500px){
+    .name{
+        display: none;
+    }
+}
 
 /* ------------------------------ */
 .banner img{
     width: 100%;
 }
 /* ------------------------------ */
-
+.intro{
+    width: 80%;
+    background-color: #d62525;
+    margin: auto;
+}
 .intro .wrap{
+    width: 100%;
     background-color: rgb(215, 209, 200);
     display: flex;
+    justify-content: center;
+
 }
-.intro .item{
-    width: 50%;
-    margin: auto;
+.intro .pic{
+    width: 40%;
 }
 .intro img{
     width: 100%;
 }
+.intro .txt h2{
+    letter-spacing: 3px;
+    line-height: 30px;
+    font-family: 'Zen Antique', serif;
+    font-weight: 300;
+}
+.intro .txt p{
+    width: 90%;
+    margin: 0px auto;
+    /* background-color: #fff; */
+}
 .intro .txt{
-    padding: 0px 30px;
+    width: 60%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+@media (max-width: 900px){
+    .intro .txt h2{
+        font-size: 18px;
+    }
+    .intro .txt p{
+    letter-spacing: 2px;
+    font-size: 14px;
+    }
+    .intro{
+        width: 100%;
+    }
+}
 
+@media (max-width: 550px){
+    .intro .wrap{
+        display: block;
+    }
+    .intro .txt h2{
+    letter-spacing: 0px;
+    font-size: 18px;
+    }
+    .intro .txt p{
+    
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding-bottom: 20px;
+    }
+    .intro .item{
+        width: 100%;
+        margin: auto;
+    }
+}
 /* ------------------------------ */
 .path{
     display: flex;
@@ -189,35 +256,43 @@ left: -8px;
     color: black;
 }
 
+
+
+ 
 /* ------------------------------ */
-.room{
-    /* margin-top: 50px; */
-}
 .XXX{
     position: relative;
     height: 200px;
-    width: 1080px;
+    width: 100%;
     margin: auto;
-   
 }
 .XXX::before{
     content: "| 客 室 |";
     font-size: 40px;
     line-height: 200px;
-    font-family: 新細明體;
-   
+    /* font-family: 新細明體; */
+    font-family: 'Zen Antique', serif;
     position: absolute;
     left: 45%;
     color: rgb(101, 101, 101);
 }
 
+.room{
+    width: 80%;
+    margin: auto;
+}
 .room .wrap {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 10px;
     display: flex;
     background-color: rgb(243, 238, 231);
 }
 .rooms{
-    padding: 3px;
-    margin: 20px;
+    width: 100%;
+    border-radius: 15px;
+    margin: 15px 10px;
+    background-color: #fff;
 }
 .rooms img{
     width: 100%;
@@ -225,101 +300,340 @@ left: -8px;
     transition: all 0.3s ease;
 }
 .rooms a{
-    /* text-decoration: none; */
     font-family: Arial, Helvetica, sans-serif;
     color: goldenrod;
     line-height: 10px;
 }
-
-.rooms img:hover{
-    transform: scale(1.1);
+.rooms h2{
+    padding: 0px 20px;
 }
+.rooms p{
+    margin-top: -5px;
+    padding: 0px 20px;
+}
+
 .room a:active{
     color: rgb(50, 50, 50);
 }
-/* ------------------------------ */
-.activ{
-    /* margin-top: 100px; */   
+
+
+@media (max-width: 550px){
+    .XXX{
+        position: relative;
+        height: 100px;
+        width: 100%;
+        margin: auto;
+    }
+    .XXX::before{
+        line-height: 80px;
+        position: absolute;
+        left: 43%;
+        color: rgb(101, 101, 101);
+    }
 }
+/* ------------------------------ */
+
 .OXO{
     position: relative;
     height: 200px;
-    width: 1080px;
+    width: 100%;
     margin: auto;
-   
 }
 .OXO::before{
     content: "| 期 間 限 定．アクティビティ |";
     font-size: 40px;
     line-height: 200px;
-    font-family: 新細明體;
-   
+    font-family: 'Zen Antique', serif;
     position: absolute;
     left: 30%;
     color: rgb(101, 101, 101);
 }
+/* oooooooooo */
+@media (min-width: 1000px){
+    .rooms img:hover{
+        transform: scale(1.1);
+    }
+}
+@media (max-width: 900px){
+    .room .wrap {
+        padding: 0px 0px;
+    }
+    .room{
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .rooms{
+        padding: 10px;
+    }
+    .OXO::before{
+        left:20%;
+        line-height: 80px;
+        margin-top: 50px;
+    }
 
- .wrap{
-   background-color: rgb(244, 240, 235); 
-   width: 1080px;
-   margin: auto;
 }
-.wrap .b{
-    position: relative;
+@media (max-width: 768px){
+    .OXO{
+        height: 100px;
+    }
+    .OXO::before{
+        font-size: 20px;
+        left: 30%;
+        line-height: 80px;
+        margin-top: 0px;
+    }
+    .XXX{
+        height: 100px;
+    }
+    .XXX::before{
+        content: "| 客 室 |";
+        left: 43%;
+        font-size: 28px;
+        line-height: 80px;
+    }
+    .room{
+        width: 100%;
+    }
+    .room .wrap {
+        display: block;
+        padding: 20px 0px;
+    }
+    .rooms{
+        width: 80%;
+        padding: 0px 0px 20px 0px;
+        margin: 50px auto;
+        border-radius: 0px;
+        box-shadow:0px 5px 10px rgba(64, 40, 12, 0.3);
+    }
+    .rooms img{
+        border-radius: 0px;
 }
-.wrap .c{
-    position: relative;
-}
-.activ .b img{
-    width: 800px;
-    position: relative;
-    left: 40px;
-}
-.activ .c img{
-    width: 800px;
-    position: relative;
-    left: 230px;
-    margin-top: 100px;
 
 }
-.actxt{
-    padding: 20px;
-    line-height: 25px;
-    width: 320px;
-    height: 340px;
-    background-color: rgba(191, 187, 182, 0.6);
+@media (max-width: 650px){
+    .OXO::before{
+        font-size: 20px;
+        left: 27%;
+        line-height: 80px;
+    }
+}
+@media (max-width: 500px){
+    .OXO::before{
+        left: 17%;
+    }
+    .XXX::before{
+        content: "| 客 室 |";
+        left: 40%;
+    }
+    .rooms{
+        width: 90%;
+        margin: 30px auto;
+    }
+}
+
+
+/*------------------------------ */
+.activ1{
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+.activ1 img{
+    width: 70%;
+}
+.activ2{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+.activ2 img{
+    width: 70%;
+    margin-left: 30%;
+}
+.TXT{
+    padding: 30px;
+    width: 40%;
+    height: 70%;
+    background-color: rgba(200, 191, 180, 0.6);
     box-shadow: 5px 10px 15px rgba(247, 235, 214, 0);
-   
-
     transition: all 0.2s ease-in;
+}
+
+.TXT h2{
+    letter-spacing: 5px;
+}
+.TXT h4{
+    letter-spacing: 1px;
+    font-size: 16px;
+    /* background-color: #e60d0d; */
+}
+.TXT a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.TXT1{
+    position: absolute;
+    top: 8%;
+    right: 0%;
     
 }
-.actxt a{
-    text-decoration: none;
-    color: goldenrod;
-}
-.acitem .B{
+.TXT2{
     position: absolute;
-    top: 90px;
-    right: 50px;
+    top: 8%;
+    left: 0%;
+    
 }
-.acitem .C{
-    position: absolute;
-    top: 200px;
-    left: 41px;
+
+/* oooooooooooooo */
+@media (min-width: 900px){
+    .TXT:hover{
+        background-color: rgba(226, 222, 214, 0.6);
+        box-shadow: 5px 10px 25px rgba(247, 235, 214, 0.6);
+    }
+    .TXT a:hover{
+        color: rgb(221, 33, 33);
+    }
 }
-.actxt:hover{
-    background-color: rgba(226, 222, 214, 0.6);
-    box-shadow: 5px 10px 25px rgba(247, 235, 214, 0.6);
+@media (max-width: 1300px){
+    .TXT{
+        width: 42%;
+        height: 68%;
+        padding: 30px;
+        
+    }
+    .TXT h4{
+        font-size: 14px;
+        /* background-color: #fff; */
+        margin-top: 10px;
+    }
+    .TXT h2{
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
 }
-.actxt a:hover{
-    color: rgb(221, 33, 33);
+
+@media (max-width: 1100px){
+    .TXT{
+        width: 45%;
+    }
+    .TXT h4{
+
+        width: 100%;
+        font-size: 14px;
+        /* background-color: #ffff6a; */
+    }
+    .TXT h2{
+        font-size: 20px;
+        margin-top: -12px;
+    }
+    .TXT1{
+        position: absolute;
+        top: 5%;
+    }
+    .TXT2{
+        position: absolute;
+        top: 5%;
+    }
+
 }
+@media (max-width: 900px){
+    .activ1{
+        width: 100%;
+    }
+    .activ2{
+        width: 100%;
+    }
+    .TXT h4{
+        width: 100%;
+        font-size: 13px;
+        /* background-color: #ffa16a; */
+    }
+    .activ1 img{
+        width: 100%;
+    }
+    .activ2 img{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .TXT{
+        padding: 30px;
+        width: 80%;
+        height: 30%;
+    }
+    .TXT h2{
+        margin-top: -10px;
+    }
+    .TXT1{
+        position: absolute;
+        top: 55%;
+        
+    }
+    .TXT2{
+        position: absolute;
+        top: 55%;
+        
+    }
+}
+
+@media (max-width: 768px){
+    .TXT{
+        padding: 30px;
+        width: 100%;
+        height: 46%;
+        box-sizing: border-box;
+    }
+    .TXT h4{
+        margin-top: 0px;
+        font-size: 12px;
+        /* background-color: #72ff6a; */
+    }
+    .TXT1{
+        position: absolute;
+        top: 53%;
+        
+    }
+    .TXT2{
+        position: absolute;
+        top: 53%;
+        
+    }
+
+}
+@media (max-width: 650px){
+    .TXT1{
+        position: absolute;
+        top: 100%;
+    }
+    .TXT2{
+        position: absolute;
+        top: 100%;
+    }
+    .TXT{
+        padding: 30px;
+        width: 100%;
+        height: 60%;
+        background-color: rgb(255, 255, 255);
+    }
+    .activ2{
+        margin-top: 230px;
+    }
+}
+ 
+
+
+
+
+
+
 /* ------------------------------ */
 .rightshere {
     position: fixed;
     z-index: 8;
-    top: 500px;
+    top: 30%;
     right: -85px;
     transition: all 0.5s  ease;
 }
@@ -354,27 +668,33 @@ left: -8px;
 }
 
 
+
+
+
+
+
+
+
 /* ------------------------------ */
-.more{
-    margin-bottom: 130px;
-}
+
 .OOO{
     position: relative;
     height: 200px;
-    width: 1080px;
+    width: 100%;
     margin: auto;
-   
 }
 .OOO::before{
     content: "．．． ";
     font-size: 60px;
     line-height: 200px;
-   
     position: absolute;
-    left: 40%;
+    left: 45%;
     color: rgb(101, 101, 101);
 }
 
+.more{
+    margin-bottom: 130px;
+}
 .wrap-up{
     display: flex;
     width: 1080px;
@@ -398,22 +718,14 @@ left: -8px;
     overflow: hidden;
 }
 
-.footer{
-    background-color: rgb(82, 76, 64);
-    text-align: center;
-    line-height: 40px;
-    color: rgb(216, 191, 51);
-    font-size: 15px;
-    box-shadow: 10px -25px 60px rgba(209, 186, 91, 0.6);
 
-}
 .more p{
     font-size: 14px;
     text-align: center;
     padding: 0px 10px;
     line-height: 25px;
 }
-.txt1{
+.more .txt{
     position: absolute;
     top: 0px;
     color: aliceblue;
@@ -426,7 +738,8 @@ left: -8px;
     opacity: 0;
     transition: all 0.5s ease; 
 }
-.txt1 a{
+.more .txt a{
+    font-family: 微軟正黑體;
     display: inline-block;
     line-height: 30px;
     width: 130px;
@@ -438,33 +751,9 @@ left: -8px;
     
     transition: all 0.5s ease;
 }
-.txt2{
-    position: absolute;
-    top: 0px;
-    color: aliceblue;
-    z-index: 2;
-    width: 360px;
-    /* line-height: 240px; */
-    padding: 180px 5px;
-    text-align: center;
-    letter-spacing: 5px;
-    opacity: 0;
-    transition: all 0.5s ease;
-    
-}
-.txt2 a{
-    display: inline-block;
-    line-height: 30px;
-    width: 130px;
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 12px;
-    border-radius: 20px;
-    border: 0.5px solid ;
-    
-    transition: all 0.5s ease;
-}
-/* ---- */
+
+
+/* --遮罩-- */
 .more .and::after{
     content: "";
     position: absolute;
@@ -472,38 +761,209 @@ left: -8px;
     top: 4px;
     height: 239px;
     width: 360px;
-    /* padding: 3.5px 5px; */
-    /* background-color: black; */
     transition: all 0.2s;  
 
 }
-.more .and:hover::after{
-    background-color: rgba(0,0,0,0.6);
+/* ooooooooooooo min oooooooooooooooooo */
 
-}
+@media (min-width: 900px){
+    .more .and:hover::after{
+        background-color: rgba(0,0,0,0.6);
 
-.txt1:hover{
-    opacity: 1;
-    padding: 45px 5px;
-}
-.txt2:hover{
-    opacity: 1;
-    padding: 45px 5px;
-}
-.txt1 a:active{
-    background-color: rgba(191, 187, 182, 0.3);
-}
+    }
 
-.txt1 a:hover{
-    color: rgb(228, 195, 111)
-}
-.txt2 a:active{
-    background-color: rgba(191, 187, 182, 0.3);
-}
+    .more .txt:hover{
+        opacity: 1;
+        padding: 15px 5px;
+    }
 
-.txt2 a:hover{
-    color: rgb(228, 195, 111)
+    .more .txt a:active{
+        background-color: rgba(191, 187, 182, 0.3);
+    }
+
+    .more .txt a:hover{
+        color: rgb(228, 195, 111)
+    }
+}
+@media (min-width: 1200px){
+    .more .txt:hover{
+        opacity: 1;
+        padding: 30px 5px;
+    }
 }
 /* ------------------------------ */
+@media (max-width: 1200px){
+    .OOO::before{
+        position: absolute;
+        left: 42%;
+
+    }
+    .wrap-up{
+        width: 900px;
+    }
+    .wrap-down{
+        width: 900px;
+    }
+    .more img{
+        width: 300px;
+        height: 180px;
+    }
+    .more .txt{
+        width: 300px;
+        /* padding: -50px 5px; */
+        letter-spacing: 5px;
+        opacity: 0;
+        transition: all 0.5s ease; 
+    }
+    .more .txt a{
+        line-height: 24px;
+        width: 120px;
+        text-decoration: none;
+        color: aliceblue;
+        font-size: 10px;
+    }
+    .more .and::after{
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 2px;
+        height: 180px;
+        width: 300px;
+    }
+    .more p{
+        font-size: 12px;
+        text-align: center;
+        padding: 0px 10px;
+        line-height: 20px;
+    }
+
+}
+
+@media (max-width: 900px){
+    .more{
+        width: 100%;
+        display: flex;
+    }
+    .wrap-up{
+        display: block;
+        width: 80%;
+    }
+    .wrap-down{
+        display: block;
+        width: 80%;
+    }
+    .more .and{
+        width: 90%;
+        margin: auto;
+        background-color: #ffffff;
+
+    }
+    .wrap-up .and{
+        padding-left: 20px;
+    }
+    .wrap-down .and{
+        padding-right: 20px;
+    }
+    .more img{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 10px 0px;
+    }
+
+    .more .and::after{
+        content: "";
+        z-index: 2;
+        position: absolute;
+        left:0%;
+        top: 95%;
+        height: 90%;
+        width:100%;
+        box-shadow: 0px -50px 40px rgba(255, 255, 255, 0.9);
+    }
+    .more .txt {
+        z-index: 3;
+        opacity: 1;
+        position: relative;
+        width: 100%;
+        padding: 0px 5px;
+
+    }
+    .more .txt a{
+        color: rgb(16, 16, 16);
+        /* background-color: rgba(0,0,0 0.5); */
+        border: none;
+        position: absolute;
+        top: -45px;
+        left: 35%;
+        font-size: 14px;
+        font-weight: 800;
+        /* background-color: #dc3535; */
+    }
+    .more .txt h2{
+        display: none;
+        
+    }
+    .more p{
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .more .txt a{
+        position: absolute;
+        left: 30%;
+    }
+    .OOO::before{
+        position: absolute;
+        left: 37%;
+
+    }
+}
+@media (max-width: 650px){
+        .OOO{
+        margin-top: 40%;
+    }
+    .OOO::before{
+        position: absolute;
+        left: 33%;
+
+    }
+}
+@media (max-width: 500px){
+    .more{
+        display: block;
+    }
+    .wrap-up .and{
+        padding-left: 0px;
+    }
+    .wrap-down .and{
+        padding-right: 0px;
+    }
+    .more .txt a{
+        position: absolute;
+        left: 30%;
+    }
+    .OOO{
+        margin-top: 50%;
+    }
+    .OOO::before{
+        position: absolute;
+        left: 28%;
+
+    }
+
+}
 
 
+
+/* 頁尾 */
+
+.footer{
+    background-color: rgb(82, 76, 64);
+    text-align: center;
+    line-height: 40px;
+    color: rgb(216, 191, 51);
+    font-size: 15px;
+    box-shadow: 10px -25px 60px rgba(209, 186, 91, 0.6);
+
+}
